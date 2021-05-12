@@ -1,0 +1,20 @@
+<h2>Child component </h2>
+<h3>{{profile}}</h3>
+<p *ngIf="showElement"> strctural directive1</p>
+<p *ngIf="!showElement"> not a strctural directive1</p>
+<div [ngSwitch]="color">
+    <p *ngSwitchWhen="red">Red color is shown</p>
+    <p *ngSwitchWhen="Blue">Blue color is shown</p>
+    <p *ngSwitchWhen="Green">Green color is shown</p>
+    <p *ngSwitchDefault>Invalid color</p>
+</div>
+<ul>
+    <li *ngFor="let array of list">{{array}}</li>
+</ul>
+<ul>
+   <li *ngFor="let newArray of people">
+       <span *ngIf="newArray.age>=20">Hello,My name is {{newArray.name}} and I am from {{newArray.country}}</span>
+   </li>
+</ul> 
+<p [ngClass]="{classOne:c1,classTwo:c2}"> This is about ngClass</p>
+<div [ngStyle]="{'font-style':style}">About ngstyle</div>
